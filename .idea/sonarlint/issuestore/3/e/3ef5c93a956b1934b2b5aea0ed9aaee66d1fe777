@@ -1,0 +1,25 @@
+
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(ÙúÇ©úÿÿÿÿ
+I
+java:S1481d".Remove this unused "imageLink" local variable.(ó£ø´þÿÿÿÿ
+>	java:S108W")Either remove or fill this block of code.(¨šþµ
+Z
+java:S2147@"DCombine this catch with the one at line 62, which has the same body.(ï­£Ä
+R
+java:S1444"0Make this "public static currentRow" field final(õÎËþøÿÿÿÿ8’¡Œ‹ˆ/
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(œúµ¹þÿÿÿÿ
+X
+java:S1854d"=Remove this useless assignment to local variable "imageLink".(ó£ø´þÿÿÿÿ
+W
+java:S1117I"<Rename "workbook" which hides the field declared at line 16.(ëÕ¢Íÿÿÿÿÿ
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ýƒÞÿÿÿÿÿ8ÓŠ…‹ˆ/
+O
+java:S1117j"9Rename "sheet" which hides the field declared at line 17.(ª³²é
+W
+java:S1117i"<Rename "workbook" which hides the field declared at line 16.(ëÕ¢Íÿÿÿÿÿ
+x
+java:S1104"VMake currentRow a static final constant or non-public and provide accessors if needed.(õÎËþøÿÿÿÿ8’¡Œ‹ˆ/
+O
+java:S1117J"9Rename "sheet" which hides the field declared at line 17.(ª³²é

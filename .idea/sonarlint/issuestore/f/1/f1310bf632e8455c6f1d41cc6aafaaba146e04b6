@@ -1,0 +1,56 @@
+
+Q
+java:S1444"/Make this "public static startTime" field final(ÉÒ€ÿÿÿÿÿ8ºüŸˆ/
+]	java:S125*"<This block of commented-out lines of code should be removed.(„ã˜¾úÿÿÿÿ8ºüŸˆ/
+X
+java:S26965"6Make the enclosing method "static" or remove this set.(é÷±¶øÿÿÿÿ8Ó€¤¡ˆ/
+X	java:S110"<This class has 6 parents which is greater than 5 authorized.(®º±­8ºüŸˆ/
+s
+java:S1450†"URemove the "label1" field and declare it as a local variable in the relevant methods.(ÛŠ’Á8ºüŸˆ/
+t
+java:S1450Œ"VRemove the "button1" field and declare it as a local variable in the relevant methods.(İ¢ÈÒ8ºüŸˆ/
+X
+java:S26963"6Make the enclosing method "static" or remove this set.(è¸”ûÿÿÿÿ8Ó€¤¡ˆ/
+s
+java:S1450ƒ"URemove the "panel1" field and declare it as a local variable in the relevant methods.(–¾Ê‰8ºüŸˆ/
+E
+java:S11721"(Remove this unused method parameter "e".(û’Â÷8ºüŸˆ/
+x
+java:S1450Š"URemove the "label4" field and declare it as a local variable in the relevant methods.(ª†´Œüÿÿÿÿ8ºüŸˆ/
+x
+java:S1450‡"URemove the "label2" field and declare it as a local variable in the relevant methods.(äÈ„Áûÿÿÿÿ8ºüŸˆ/
+s
+java:S1450"URemove the "label5" field and declare it as a local variable in the relevant methods.(—¡¸‘8ºüŸˆ/
+E
+java:S1172%"(Remove this unused method parameter "e".(İœ±ú8ºüŸˆ/
+J
+java:S1444"-Make this "public static endTime" field final(¼…Á×8ºüŸˆ/
+O
+java:S1199U"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8ºüŸˆ/
+]	java:S125&"<This block of commented-out lines of code should be removed.(ÔÓÛüÿÿÿÿ8ºüŸˆ/
+X
+java:S26964"6Make the enclosing method "static" or remove this set.(¬¸­¼úÿÿÿÿ8Ó€¤¡ˆ/
+v
+java:S1104"XMake progressBar1 a static final constant or non-public and provide accessors if needed.(êÏ¡™8ºüŸˆ/
+r
+java:S1450"URemove the "label6" field and declare it as a local variable in the relevant methods.(¢×08ºüŸˆ/
+X	java:S125""<This block of commented-out lines of code should be removed.(Àóè8ºüŸˆ/
+J
+java:S1172!"(Remove this unused method parameter "e".(úÔÍ¹üÿÿÿÿ8ºüŸˆ/
+S
+java:S26966"6Make the enclosing method "static" or remove this set.(Ù–Šæ8Ó€¤¡ˆ/
+w
+java:S1104"UMake startTime a static final constant or non-public and provide accessors if needed.(ÉÒ€ÿÿÿÿÿ8ºüŸˆ/
+J
+java:S1172-"(Remove this unused method parameter "e".(šûÎ¡üÿÿÿÿ8ºüŸˆ/
+P
+java:S1444"2Make this "public static progressBar1" field final(êÏ¡™8ºüŸˆ/
+s
+java:S1450‰"URemove the "label3" field and declare it as a local variable in the relevant methods.(æøÕÄ8ºüŸˆ/
+W	java:S125."<This block of commented-out lines of code should be removed.(·º¢*8ºüŸˆ/
+S
+java:S2696L"6Make the enclosing method "static" or remove this set.(Åˆâ»8ºüŸˆ/
+E
+java:S1172)"(Remove this unused method parameter "e".(“¶áë8ºüŸˆ/
+p
+java:S1104"SMake endTime a static final constant or non-public and provide accessors if needed.(¼…Á×8ºüŸˆ/

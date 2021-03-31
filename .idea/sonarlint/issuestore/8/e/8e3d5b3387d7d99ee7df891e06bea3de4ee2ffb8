@@ -1,0 +1,16 @@
+
+p
+java:S1104"SMake endTime a static final constant or non-public and provide accessors if needed.(¼…Á×8ºµŸˆ/
+J
+java:S1444"-Make this "public static endTime" field final(¼…Á×8ºµŸˆ/
+Q
+java:S1444"/Make this "public static startTime" field final(ÉÒ€ÿÿÿÿÿ8ºµŸˆ/
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8Ãßø¢ˆ/
+w
+java:S1104"UMake startTime a static final constant or non-public and provide accessors if needed.(ÉÒ€ÿÿÿÿÿ8ºµŸˆ/
+\
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8Ãßø¢ˆ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¿‰È™ùÿÿÿÿ8‹ëï¥ˆ/
+_
+java:S1128"BRemove this unused import 'com.highland.leads.services.PDFReader'.(Ï”ıõ8†Æ¨Çˆ/

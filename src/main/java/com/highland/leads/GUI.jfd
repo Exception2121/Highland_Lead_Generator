@@ -1,0 +1,92 @@
+JFDML JFormDesigner: "7.0.2.6.321" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {comp panel1:::p::p, space :0:0:x}}"
+			"$verticalGroup": "par l {comp panel1::l:::x}"
+		} ) {
+			name: "this"
+			"title": "Highland Shutter & Shade Lead Generation Tool"
+			auxiliary() {
+				"JavaCodeGenerator.postInitCode": "${field}.setVisible(true);"
+			}
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :p:56:p, par l {seq l {space :p:62:p, comp label2:::p::p}, par t:l::p {comp textField1::l:::x, comp textField2::l:p:211:p}, seq l {space :p:61:p, comp label1:::p::p}}, space :::x, par l {seq l {space :6:6:p, comp label6:::p::p}, par t:l {par l:t {seq l {space :p:8:p, comp label3:::p::p}, comp textField3::l:p:100:p}, par l:t {comp textField4::l:p:100:p, seq l {space :p:15:p, comp label4:::p::p}}}}, space :p:100:p}, seq {par l {seq l {space :p:30:p, comp progressBar1:::p:459:p}, seq l {space :p:175:p, comp button1:::p:148:p}, seq l {space :p:126:p, comp label5:::p::p}}, space ::40:x}}"
+				"$verticalGroup": "par l {seq l {space :p:34:p, comp label5:::p::p, space :p:41:p, par l {seq {comp label1:::p::p, space :::p, comp textField1:::p::p, space :p:5:p, comp label2:::p::p, space :::p, comp textField2:::p::p}, seq {comp label3:::p::p, space :::p, comp textField3:::p::p, space :::p, comp label4:::p::p, space :::p, comp textField4:::p::p, space :::p, comp label6:::p::p}}, space :p:19:p, comp button1:::p::p, space ::74:x, comp progressBar1:::p:13:p, space :p:45:p}}"
+			} ) {
+				name: "panel1"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField1"
+					"text": "danfowens2021"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textField1KeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField2"
+					"text": "Sellmoreshutters2021#"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textField2KeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "Username"
+					"foreground": &Color0 new java.awt.Color( 51, 51, 51, 255 )
+					"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "Password"
+					"foreground": #Color0
+					"font": #SwingDerivedFont0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField3"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textField3KeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Date From"
+					"foreground": #Color0
+					"font": #SwingDerivedFont0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "Date To"
+					"foreground": #Color0
+					"font": #SwingDerivedFont0
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField4"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textField4KeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "Start"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1MousePressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "Highland Shutter & Shade"
+					"foreground": new java.awt.Color( 51, 51, 51, 255 )
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 10, false )
+				} )
+				add( new FormComponent( "javax.swing.JProgressBar" ) {
+					name: "progressBar1"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 9
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "ex: 06212020"
+					"foreground": #Color0
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 2, false )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 530, 470 )
+		} )
+	}
+}

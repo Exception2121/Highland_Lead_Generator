@@ -1,0 +1,126 @@
+
+Y
+java:S2696Ê"6Make the enclosing method "static" or remove this set.(¸ş©Áúÿÿÿÿ8ÕÄ£¡ˆ/
+E	java:S108–")Either remove or fill this block of code.(³â±(8çåÎŸˆ/
+T
+java:S2696¨"6Make the enclosing method "static" or remove this set.(ò¡×Ğ8ˆ–Ñ£ˆ/
+F
+java:S3010*"$Remove this assignment of "options".(¢ô¤ñûÿÿÿÿ8ÉôÑ£ˆ/
+M
+java:S1444!"+Make this "public static limit" field final(ğ¨„Êúÿÿÿÿ8çåÎŸˆ/
+V	java:S106ß"9Replace this use of System.out or System.err by a logger.(–Œ…ğ8çåÎŸˆ/
+P
+java:S1444$".Make this "public static username" field final(ş…Öûÿÿÿÿ8çåÎŸˆ/
+F	java:S108")Either remove or fill this block of code.(ÏÅ—é8çåÎŸˆ/
+i
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ8çåÎŸˆ/
+F	java:S108")Either remove or fill this block of code.(Í¡Ã°8çåÎŸˆ/
+Y
+java:S2696©"6Make the enclosing method "static" or remove this set.(İòù—ÿÿÿÿÿ8Ã¿Ñ£ˆ/
+\
+java:S1155ë">Use isEmpty() to check whether the collection is empty or not.(ö°›Î8çåÎŸˆ/
+[	java:S106Ş"9Replace this use of System.out or System.err by a logger.(Î´íàûÿÿÿÿ8çåÎŸˆ/
+J
+java:S1444"-Make this "public static endDate" field final(½šàÓ8çåÎŸˆ/
+Y
+java:S2696¡"6Make the enclosing method "static" or remove this set.(€±…Òıÿÿÿÿ8ˆ–Ñ£ˆ/
+K	java:S108˜")Either remove or fill this block of code.(“£À°üÿÿÿÿ8çåÎŸˆ/
+R
+java:S1444&"0Make this "public static jobRequest" field final(±˜âşÿÿÿÿ8çåÎŸˆ/
+F	java:S108”")Either remove or fill this block of code.(–¥µÖ8çåÎŸˆ/
+Q
+java:S1444"/Make this "public static startDate" field final(ñå¥¬ûÿÿÿÿ8çåÎŸˆ/
+R
+java:S2696v"6Make the enclosing method "static" or remove this set.(¬è´8ÕÄ£¡ˆ/
+P
+java:S1444%".Make this "public static password" field final(•´úÏûÿÿÿÿ8çåÎŸˆ/
+w
+java:S1104"UMake startDate a static final constant or non-public and provide accessors if needed.(ñå¥¬ûÿÿÿÿ8çåÎŸˆ/
+U
+java:S1144—"7Remove this unused private "createTrustManager" method.(öÚüë8çåÎŸˆ/
+[	java:S106à"9Replace this use of System.out or System.err by a logger.(Ûùúûûÿÿÿÿ8çåÎŸˆ/
+K	java:S108—")Either remove or fill this block of code.(Â‹üùÿÿÿÿ8çåÎŸˆ/
+s
+java:S1149+"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ÔÅ 8çåÎŸˆ/
+X	java:S125Q"<This block of commented-out lines of code should be removed.(¼Ö„œ8çåÎŸˆ/
+D
+java:S3010=""Remove this assignment of "files".(ê¼ê²ûÿÿÿÿ8ˆ–Ñ£ˆ/
+X
+java:S1141•"5Extract this nested try block into a separate method.(ãİĞúøÿÿÿÿ8çåÎŸˆ/
+^	java:S125”"<This block of commented-out lines of code should be removed.(—ÈÉ¿ıÿÿÿÿ8çåÎŸˆ/
+S
+java:S2696Ğ"6Make the enclosing method "static" or remove this set.(ƒËÿD8ÕÄ£¡ˆ/
+\
+java:S1155ô">Use isEmpty() to check whether the collection is empty or not.(¹¢Ì¼8çåÎŸˆ/
+X
+java:S2696S"6Make the enclosing method "static" or remove this set.(¯ƒÊşÿÿÿÿ8ÕÄ£¡ˆ/
+c
+java:S4830¥"@Enable server certificate validation on this SSL/TLS connection.(¸™ˆÕıÿÿÿÿ8çåÎŸˆ/
+O
+java:S1481Œ",Remove this unused "pdfLink" local variable.(Ÿ©øëüÿÿÿÿ8çåÎŸˆ/
+T
+java:S2696´"6Make the enclosing method "static" or remove this set.(”¸³Õ8ˆ–Ñ£ˆ/
+v
+java:S1104$"TMake username a static final constant or non-public and provide accessors if needed.(ş…Öûÿÿÿÿ8çåÎŸˆ/
+X	java:S1253"<This block of commented-out lines of code should be removed.(ªÍ¾Ê8çåÎŸˆ/
+v
+java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÔÅ 8çåÎŸˆ/
+p
+java:S1104"SMake endDate a static final constant or non-public and provide accessors if needed.(½šàÓ8çåÎŸˆ/
+K	java:S108•")Either remove or fill this block of code.(ãİĞúøÿÿÿÿ8çåÎŸˆ/
+X
+java:S1141˜"5Extract this nested try block into a separate method.(“£À°üÿÿÿÿ8çåÎŸˆ/
+_	java:S899±"=Do something with the "boolean" value returned by "renameTo".(ŸÄ­Úùÿÿÿÿ8¼Èô ˆ/
+X
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8çåÎŸˆ/
+X
+java:S1141¯"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8çåÎŸˆ/
+D
+java:S1168"&Return an empty array instead of null.(…Åà‹8çåÎŸˆ/
+o
+java:S1104"RMake reader a static final constant or non-public and provide accessors if needed.(¿íæ8çåÎŸˆ/
+O
+java:S4423­",Change this code to use a stronger protocol.(êßö ûÿÿÿÿ8çåÎŸˆ/
+S
+java:S1141"5Extract this nested try block into a separate method.(ÏÅ—é8çåÎŸˆ/
+u
+java:S3776ç"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(†Â×ïşÿÿÿÿ8çåÎŸˆ/
+X
+java:S1141—"5Extract this nested try block into a separate method.(Â‹üùÿÿÿÿ8çåÎŸˆ/
+R
+java:S1141–"5Extract this nested try block into a separate method.(³â±(8çåÎŸˆ/
+s
+java:S1104!"QMake limit a static final constant or non-public and provide accessors if needed.(ğ¨„Êúÿÿÿÿ8çåÎŸˆ/
+S
+java:S1141”"5Extract this nested try block into a separate method.(–¥µÖ8çåÎŸˆ/
+x
+java:S1104&"VMake jobRequest a static final constant or non-public and provide accessors if needed.(±˜âşÿÿÿÿ8çåÎŸˆ/
+I
+java:S3010>"'Remove this assignment of "chosenFile".(æ»Êüÿÿÿÿ8ˆ–Ñ£ˆ/
+S
+java:S2696u"6Make the enclosing method "static" or remove this set.(Öë½ì8ÕÄ£¡ˆ/
+f
+java:S11920"IDefine a constant instead of duplicating this literal "user.dir" 5 times.(Îæá¸8çåÎŸˆ/
+]	java:S125X"<This block of commented-out lines of code should be removed.(®Ì‘¡ùÿÿÿÿ8çåÎŸˆ/
+X	java:S1257"<This block of commented-out lines of code should be removed.(È£õ”8çåÎŸˆ/
+T
+java:S2696Ç"6Make the enclosing method "static" or remove this set.(Ë¿Ê±8ÕÄ£¡ˆ/
+C
+java:S3010<"&Remove this assignment of "directory".(¼ã²×8ˆ–Ñ£ˆ/
+v
+java:S1104%"TMake password a static final constant or non-public and provide accessors if needed.(•´úÏûÿÿÿÿ8çåÎŸˆ/
+[	java:S106İ"9Replace this use of System.out or System.err by a logger.(÷Üâìûÿÿÿÿ8çåÎŸˆ/
+X
+java:S1141™"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8çåÎŸˆ/
+T
+java:S2696Ÿ"6Make the enclosing method "static" or remove this set.(ÏÏ©«8ˆ–Ñ£ˆ/
+c
+java:S4830¡"@Enable server certificate validation on this SSL/TLS connection.(–íşÿÿÿÿ8çåÎŸˆ/
+S
+java:S1141"5Extract this nested try block into a separate method.(Í¡Ã°8çåÎŸˆ/
+X
+java:S1141ö"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8çåÎŸˆ/
+t
+java:S3776N"RRefactor this method to reduce its Cognitive Complexity from 57 to the 15 allowed.(ÿŸ¾Ğüÿÿÿÿ8ÎŸì ˆ/
+Y
+java:S2696ú"6Make the enclosing method "static" or remove this set.(¯ƒÊşÿÿÿÿ8ÕÄ£¡ˆ/
