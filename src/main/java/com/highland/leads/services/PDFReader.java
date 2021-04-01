@@ -1,6 +1,7 @@
 package com.highland.leads.services;
 
 import com.highland.leads.models.Excel;
+import com.highland.leads.models.JobRequest;
 import com.highland.leads.models.Lead;
 import com.highland.leads.cosmos.Database;
 import net.sourceforge.tess4j.Tesseract;
@@ -77,6 +78,7 @@ public class PDFReader {
             String fileName = System.getProperty("user.dir") + "\\results.xls";
             ClassLoader classLoader = getClass().getClassLoader();
             File file = new File(classLoader.getResource(fileName).getFile());
+            WebScanner.jobRequest.setStatus(JobRequest.Status.SUCCEEDED);
             WebScanner.jobRequest.setFile(file);
             Database.updateJobRequest(WebScanner.jobRequest);
             finished = true;

@@ -1,5 +1,6 @@
 package com.highland.leads;
 
+import com.highland.leads.cosmos.Database;
 import com.highland.leads.services.PDFReader;
 import com.highland.leads.services.WebScanner;
 
@@ -19,6 +20,7 @@ public class Main{
             WebScanner.endDate = args[1];
             WebScanner.username = args[2];
             WebScanner.password = args[3];
+            WebScanner.jobRequest = Database.getJobRequest(args[4]);
 
             WebScanner w = new WebScanner();
             Thread scanThread = new Thread(w);

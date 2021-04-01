@@ -57,10 +57,10 @@ public class Database {
             e.printStackTrace();
         }
     }
-    public static JobRequest getJobRequest(JobRequest jobRequest){
+    public static JobRequest getJobRequest(String id){
         if(cosmosContainer == null) initialize();
         try {
-            CosmosItemResponse<JobRequest> item = cosmosContainer.readItem(jobRequest.getId(), new PartitionKey(jobRequest.getId()), JobRequest.class);
+            CosmosItemResponse<JobRequest> item = cosmosContainer.readItem(id, new PartitionKey(id), JobRequest.class);
             return item.getItem();
         } catch (CosmosException e) {
             e.printStackTrace();
