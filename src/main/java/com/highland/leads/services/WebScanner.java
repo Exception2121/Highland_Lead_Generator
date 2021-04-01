@@ -88,21 +88,24 @@ public class WebScanner implements Runnable{
                 driver.get("https://proaccess.williamson-tn.org/proaccess/"); // Website link
                 driver.findElement(By.xpath("//a[contains(text(),'Login to Professional Access')]")).click();
 
-                /* Begin Login */
-                //username = "highlandshutter2020";
-                //password = "Sellmore2020#";
+                try{
+                    /* Begin Login */
+                    WebElement login = driver.findElement(By.xpath("//input[@id='login-login']"));
+                    login.clear();
+                    login.sendKeys(username);
+                    WebElement passwordField = driver.findElement(By.xpath("//input[@id='login-password']"));
+                    passwordField.clear();
+                    passwordField.sendKeys(password);
+                    driver.findElement(By.xpath("//input[@value='Log In']")).click();
+                    /* End Login */
+                    driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).click();
+                }catch (Exception e){
+                    WebScanner.jobRequest.setStatus(JobRequest.Status.FAILED);
+                    Database.updateJobRequest(WebScanner.jobRequest);
+                }
 
-                WebElement login = driver.findElement(By.xpath("//input[@id='login-login']"));
-                login.clear();
-                login.sendKeys(username);
-                WebElement passwordField = driver.findElement(By.xpath("//input[@id='login-password']"));
-                passwordField.clear();
-                passwordField.sendKeys(password);
-                driver.findElement(By.xpath("//input[@value='Log In']")).click();
-                /* End Login */
 
                 /* Begin Search */
-                driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).click();
                 driver.findElement(By.xpath("//a[contains(@href, 'index.php')]")).click();
                 driver.get("https://proaccess.williamson-tn.org/proaccess/deed_search/insttype.php?cnum=24");
                 Select instrumentType = new Select(driver.findElement(By.xpath("//select[@name='itype1']")));
@@ -214,20 +217,25 @@ public class WebScanner implements Runnable{
                     int elementPosition = nextElement.getLocation().getY();
                     String js = String.format("window.scroll(0, %s)", elementPosition);
                     ((JavascriptExecutor)driver).executeScript(js);
-                    nextElement.click();
+                    try{
+                        nextElement.click();
+                    }catch (Exception e){
+                        driver.get("https://proaccess.williamson-tn.org/proaccess/menu/");
+                        driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[8]/a")).click();
+                        System.out.println("PDF Download Complete!");
+                        System.out.println("Downloaded " + location + " / " + limit);
+                        System.out.println("\n------------------------------------------\n");
+                        System.out.println("Now downloading images...");
+                        driver.close();
+                        setImageLinks();
+                    }
                 }
                 /* End Details*/
 
             }catch(Exception e)
             {
-                driver.get("https://proaccess.williamson-tn.org/proaccess/menu/");
-                driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[8]/a")).click();
-                System.out.println("PDF Download Complete!");
-                System.out.println("Downloaded " + location + " / " + limit);
-                System.out.println("\n------------------------------------------\n");
-                System.out.println("Now downloading images...");
-                driver.close();
-                setImageLinks();
+                WebScanner.jobRequest.setStatus(JobRequest.Status.FAILED);
+                Database.updateJobRequest(jobRequest);
             }
 
         }
