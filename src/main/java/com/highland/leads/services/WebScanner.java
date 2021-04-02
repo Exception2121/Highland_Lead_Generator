@@ -98,14 +98,16 @@ public class WebScanner implements Runnable{
                     passwordField.sendKeys(password);
                     driver.findElement(By.xpath("//input[@value='Log In']")).click();
                     /* End Login */
-                    driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).click();
+                    if(!driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).isDisplayed()) throw new Exception("Login Failed");
                 }catch (Exception e){
                     WebScanner.jobRequest.setStatus(JobRequest.Status.FAILED);
                     Database.updateJobRequest(WebScanner.jobRequest);
+                    driver.close();
                 }
 
 
                 /* Begin Search */
+                driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).click();
                 driver.findElement(By.xpath("//a[contains(@href, 'index.php')]")).click();
                 driver.get("https://proaccess.williamson-tn.org/proaccess/deed_search/insttype.php?cnum=24");
                 Select instrumentType = new Select(driver.findElement(By.xpath("//select[@name='itype1']")));

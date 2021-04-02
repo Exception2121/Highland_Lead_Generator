@@ -26,10 +26,7 @@ public class Main{
             Thread scanThread = new Thread(w);
             scanThread.start();
         }catch (IndexOutOfBoundsException e){
-            System.out.println("Must specify arguments! \nstartDate:\nendDate\nusername\npasssword\n");
+            System.out.println("Must specify arguments! \nstartDate:\nendDate\nusername\npasssword\njobId\n");
         }
-    }
-    public static ClassLoader getClassLoeader(){
-        return Main.class.getClassLoader();
     }
 }
