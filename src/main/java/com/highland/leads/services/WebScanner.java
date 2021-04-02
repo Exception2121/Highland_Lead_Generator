@@ -88,24 +88,18 @@ public class WebScanner implements Runnable{
                 driver.get("https://proaccess.williamson-tn.org/proaccess/"); // Website link
                 driver.findElement(By.xpath("//a[contains(text(),'Login to Professional Access')]")).click();
 
-                try{
-                    /* Begin Login */
-                    WebElement login = driver.findElement(By.xpath("//input[@id='login-login']"));
-                    login.clear();
-                    login.sendKeys(username);
-                    WebElement passwordField = driver.findElement(By.xpath("//input[@id='login-password']"));
-                    passwordField.clear();
-                    passwordField.sendKeys(password);
-                    driver.findElement(By.xpath("//input[@value='Log In']")).click();
-                    /* End Login */
-                    if(!driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).isDisplayed()) throw new Exception("Login Failed");
-                }catch (Exception e){
-                    WebScanner.jobRequest.setStatus(JobRequest.Status.FAILED);
-                    Database.updateJobRequest(WebScanner.jobRequest);
-                    driver.close();
-                }
 
+                /* Begin Login */
+                WebElement login = driver.findElement(By.xpath("//input[@id='login-login']"));
+                login.clear();
+                login.sendKeys(username);
+                WebElement passwordField = driver.findElement(By.xpath("//input[@id='login-password']"));
+                passwordField.clear();
+                passwordField.sendKeys(password);
+                driver.findElement(By.xpath("//input[@value='Log In']")).click();
+                /* End Login */
 
+                if(!driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).isDisplayed()) throw new Exception("Login Failed");
                 /* Begin Search */
                 driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[3]/a")).click();
                 driver.findElement(By.xpath("//a[contains(@href, 'index.php')]")).click();
@@ -238,8 +232,8 @@ public class WebScanner implements Runnable{
             {
                 WebScanner.jobRequest.setStatus(JobRequest.Status.FAILED);
                 Database.updateJobRequest(jobRequest);
+                driver.close();
             }
-
         }
 
         void setImageLinks()
@@ -286,6 +280,7 @@ public class WebScanner implements Runnable{
                 ex.printStackTrace();
                 jobRequest.setStatus(JobRequest.Status.FAILED);
                 Database.updateJobRequest(jobRequest);
+                driver.close();
             }
             //driver.close();
         }
