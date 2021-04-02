@@ -216,14 +216,20 @@ public class WebScanner implements Runnable{
                     try{
                         nextElement.click();
                     }catch (Exception e){
-                        driver.get("https://proaccess.williamson-tn.org/proaccess/menu/");
-                        driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[8]/a")).click();
-                        System.out.println("PDF Download Complete!");
-                        System.out.println("Downloaded " + location + " / " + limit);
-                        System.out.println("\n------------------------------------------\n");
-                        System.out.println("Now downloading images...");
-                        driver.close();
-                        setImageLinks();
+                        try{
+                            driver.get("https://proaccess.williamson-tn.org/proaccess/menu/");
+                            driver.findElement(By.xpath("//nav[@id='pa_navigation']/ul/li[8]/a")).click();
+                            System.out.println("PDF Download Complete!");
+                            System.out.println("Downloaded " + location + " / " + limit);
+                            System.out.println("\n------------------------------------------\n");
+                            System.out.println("Now downloading images...");
+                            driver.close();
+                            setImageLinks();
+                        }catch (Exception e1){
+                            WebScanner.jobRequest.setStatus(JobRequest.Status.FAILED);
+                            Database.updateJobRequest(jobRequest);
+                            driver.close();
+                        }
                     }
                 }
                 /* End Details*/
