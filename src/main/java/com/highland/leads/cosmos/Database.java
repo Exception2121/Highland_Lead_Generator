@@ -9,7 +9,6 @@ import com.highland.leads.models.JobRequest;
 import com.azure.cosmos.ConsistencyLevel;
 import com.azure.cosmos.CosmosClient;
 import com.azure.cosmos.CosmosClientBuilder;
-import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -10,6 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import com.google.gson.Gson;
 
 import java.io.File;
+import java.lang.annotation.Inherited;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
