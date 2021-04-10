@@ -32,7 +32,11 @@ public class PDFReader {
                 processed = new LinkedList<>();
             }
             tesseract = new Tesseract();
-            tesseract.setDatapath(System.getProperty("user.dir") + "//tessData");
+            if(WebScanner.isWindows){
+                tesseract.setDatapath(System.getProperty("user.dir") + "//tessData");
+            }else{
+                tesseract.setDatapath(System.getProperty("user.dir") + "/tessData");
+            }
             this.document = document;
             queue.add(document);
         } catch (Exception e) {
@@ -75,7 +79,9 @@ public class PDFReader {
             //minutes = minutes - (hours*60);
             //System.out.println("Runtime: " + hours + " hours " + minutes + " minutes");
             WebScanner.jobRequest.setEndTime(LocalTime.now());
-            String fileName = System.getProperty("user.dir") + "\\results.xls";
+            String fileName = "";
+            if(WebScanner.isWindows) fileName = System.getProperty("user.dir") + "\\results.xls";
+            else fileName = System.getProperty("user.dir") + "/results.xls";
             ClassLoader classLoader = getClass().getClassLoader();
             File file = new File(classLoader.getResource(fileName).getFile());
             WebScanner.jobRequest.setStatus(JobRequest.Status.SUCCEEDED);
