@@ -36,6 +36,8 @@ public class WebScanner implements Runnable{
     public static String username = "";
     public static String password = "";
     public static JobRequest jobRequest;
+    public static String PDF_PATH = "";
+    public static boolean isWindows;
 
     public WebScanner()
     {
@@ -45,7 +47,15 @@ public class WebScanner implements Runnable{
                 "Chrome PDF Viewer"
         });
         preferences.put("plugins.always_open_pdf_externally", true);
-        preferences.put("download.default_directory", System.getProperty("user.dir")+"\\PDFs");
+        if(System.getProperty("os.name").toLowerCase().contains("windows")){
+            isWindows = true;
+            preferences.put("download.default_directory", System.getProperty("user.dir")+"\\PDFs");
+            PDF_PATH = System.getProperty("user.dir")+"\\PDFs";
+        }else{
+            isWindows = false;
+            preferences.put("download.default_directory", System.getProperty("user.dir")+"/PDFs");
+            PDF_PATH = System.getProperty("user.dir")+"/PDFs";
+        }
         options.addArguments("--log-level=OFF");
         options.addArguments("--safebrowsing-disable-download-protection");
         //options.addArguments("--headless");
@@ -55,7 +65,7 @@ public class WebScanner implements Runnable{
         //if(!showBrowser)
         //    options.addArguments("--headless");
         //java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
-        if(System.getProperty("os.name").toLowerCase().contains("windows")){
+        if(isWindows){
             System.setProperty(System.getProperty("user.dir") + "\\chromedriver.exe", "true");
         }else{
             System.setProperty(System.getProperty("user.dir") + "\\chromedriver", "true");
@@ -159,7 +169,7 @@ public class WebScanner implements Runnable{
                             driver.findElement(By.xpath("//a[contains(text(),'PDF')]")).click();
                             Thread.sleep(30000);
 
-                            directory = new File(System.getProperty("user.dir")+"\\PDFs");
+                            directory = new File(PDF_PATH);
 
                             files = directory.listFiles(File::isFile);
                             if (files != null)
@@ -176,11 +186,21 @@ public class WebScanner implements Runnable{
                                 {
                                     Thread.sleep(30000);
                                     try{
-                                        File newFile = new File(System.getProperty("user.dir")+"\\PDFs\\" + chosenFile.getName().replace(".crdownload", ""));
-                                        chosenFile.renameTo(newFile);
+                                        if(isWindows) {
+                                            File newFile = new File(System.getProperty("user.dir") + "\\PDFs\\" + chosenFile.getName().replace(".crdownload", ""));
+                                            chosenFile.renameTo(newFile);
+                                        }else{
+                                            File newFile = new File(System.getProperty("user.dir") + "/PDFs/" + chosenFile.getName().replace(".crdownload", ""));
+                                            chosenFile.renameTo(newFile);
+                                        }
                                     }catch (Exception e){
-                                        String newFilePath = chosenFile.getName().replace(".crdownload", "");
-                                        chosenFile = new File(System.getProperty("user.dir")+"\\PDFs\\" + newFilePath);
+                                        if(isWindows){
+                                            String newFilePath = chosenFile.getName().replace(".crdownload", "");
+                                            chosenFile = new File(System.getProperty("user.dir")+"\\PDFs\\" + newFilePath);
+                                        }else{
+                                            String newFilePath = chosenFile.getName().replace(".crdownload", "");
+                                            chosenFile = new File(System.getProperty("user.dir")+"/PDFs/" + newFilePath);
+                                        }
                                     }
                                 }
                                 pdf = chosenFile;
