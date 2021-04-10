@@ -229,11 +229,11 @@ public class WebScanner implements Runnable{
                     driver.navigate().refresh();
                     Thread.sleep(1000);
                     location++;
-                    WebElement nextElement = driver.findElement(By.xpath("(//input[@value='Details'])["+location+"]"));
-                    int elementPosition = nextElement.getLocation().getY();
-                    String js = String.format("window.scroll(0, %s)", elementPosition);
-                    ((JavascriptExecutor)driver).executeScript(js);
                     try{
+                        WebElement nextElement = driver.findElement(By.xpath("(//input[@value='Details'])["+location+"]"));
+                        int elementPosition = nextElement.getLocation().getY();
+                        String js = String.format("window.scroll(0, %s)", elementPosition);
+                        ((JavascriptExecutor)driver).executeScript(js);
                         nextElement.click();
                     }catch (Exception e){
                         try{
