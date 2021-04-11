@@ -24,7 +24,7 @@ public class Excel {
     public Excel()
     {
         fileTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-hh-mm"));
-        filepath =  "results" + fileTime + ".xls";
+        filepath =  System.getProperty("user.dir")+"/results/results" + fileTime + ".xls";
         workbook = new HSSFWorkbook();
         sheet = workbook.createSheet("Results sheet");
 

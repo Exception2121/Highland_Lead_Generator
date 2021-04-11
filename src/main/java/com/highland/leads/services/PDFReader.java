@@ -79,9 +79,8 @@ public class PDFReader {
             //minutes = minutes - (hours*60);
             //System.out.println("Runtime: " + hours + " hours " + minutes + " minutes");
             WebScanner.jobRequest.setEndTime(LocalTime.now());
-            String fileName = Excel.filepath;
-            ClassLoader classLoader = getClass().getClassLoader();
-            File file = new File(classLoader.getResource(fileName).getFile());
+            String filepath = Excel.filepath;
+            File file = new File(filepath);
             WebScanner.jobRequest.setStatus(JobRequest.Status.SUCCEEDED);
             WebScanner.jobRequest.setFile(file);
             Database.updateJobRequest(WebScanner.jobRequest);
