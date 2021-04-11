@@ -39,8 +39,18 @@ public class WebScanner implements Runnable{
     public static String PDF_PATH = "";
     public static boolean isWindows;
 
+    private void resetScanner(){
+        location = 1;
+        numSkipped = 0;
+        limit = 0;
+        directory = null;
+        files = null;
+        chosenFile = null;
+    }
+
     public WebScanner()
     {
+        resetScanner();
         options = new ChromeOptions();
         Map<String, Object> preferences = new Hashtable<String, Object>();
         preferences.put("plugins.plugins_disabled", new String[] {
