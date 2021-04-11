@@ -19,7 +19,7 @@ public class Excel {
     Set<String> keyset;
     public static int currentRow = 1;
     String fileTime;
-    String filepath;
+    public static String filepath;
 
     public Excel()
     {
