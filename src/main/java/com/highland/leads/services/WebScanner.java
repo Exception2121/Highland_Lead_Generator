@@ -46,6 +46,9 @@ public class WebScanner implements Runnable{
         directory = null;
         files = null;
         chosenFile = null;
+        PDFReader.finished = false;
+        PDFReader.processNum = 0;
+        PDFReader.currentlyProcessing = 0;
     }
 
     public WebScanner()
@@ -285,7 +288,7 @@ public class WebScanner implements Runnable{
                             PDFReader.processed.remove();
                             finalRow++;
                         }
-                        if(PDFReader.processed.size()!=0)
+                        else if(PDFReader.processed.size()!=0)
                         {
                             try{
                                 int orgSize = PDFReader.processed.size();
