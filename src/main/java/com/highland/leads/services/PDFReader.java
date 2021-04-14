@@ -57,14 +57,14 @@ public class PDFReader {
     {
         public void run()
         {
-            while(currentlyProcessing != 0 || queue.size() != 0)
+            while(currentlyProcessing != 0 || !queue.isEmpty())
             {
                 try {
                     Thread.sleep(30000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                if(currentlyProcessing < 1 & queue.size()>0)
+                if(currentlyProcessing < 1 && !queue.isEmpty())
                 {
                     currentlyProcessing++;
                     document = queue.poll();
