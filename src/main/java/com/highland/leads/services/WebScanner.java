@@ -309,7 +309,7 @@ public class WebScanner implements Runnable{
                                     driver.close();
                                     PDFReader.processed.remove();
                                 }
-                            }catch (Exception ignored){ driver.close(); PDFReader.processed.remove(); }
+                            }catch (Exception ignored){}
                         }
                     }
                 }
