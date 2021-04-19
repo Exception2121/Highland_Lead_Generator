@@ -31,6 +31,9 @@ public class PDFReader {
                 queue = new LinkedList<>();
                 processed = new LinkedList<>();
             }
+            finished = false;
+            currentlyProcessing = 0;
+            processNum = 0;
             tesseract = new Tesseract();
             if(WebScanner.isWindows){
                 tesseract.setDatapath(System.getProperty("user.dir") + "//tessData");
