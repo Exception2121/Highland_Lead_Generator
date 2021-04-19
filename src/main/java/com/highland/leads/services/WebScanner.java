@@ -313,8 +313,9 @@ public class WebScanner implements Runnable{
                         }
                     }
                 }
-
-
+                PDFReader.finished = false;
+                PDFReader.currentlyProcessing = 0;
+                PDFReader.processNum = 0;
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
                 jobRequest.setStatus(JobRequest.Status.FAILED);
