@@ -26,17 +26,11 @@ public class Database {
 
     public static void initialize(){
         if(cosmosClient == null) {
-            try{
-                cosmosClient = new CosmosClientBuilder()
-                        .endpoint(HOST)
-                        .key(MASTER_KEY)
-                        .consistencyLevel(ConsistencyLevel.EVENTUAL)
-                        .buildClient();
-
-            }catch (Exception e){
-                e.printStackTrace();
-                return;
-            }
+            cosmosClient = new CosmosClientBuilder()
+                    .endpoint(HOST)
+                    .key(MASTER_KEY)
+                    .consistencyLevel(ConsistencyLevel.EVENTUAL)
+                    .buildClient();
         }
         CosmosDatabaseResponse cosmosDatabaseResponse = cosmosClient.createDatabaseIfNotExists(databaseName);
         CosmosDatabase database = cosmosClient.getDatabase(cosmosDatabaseResponse.getProperties().getId());

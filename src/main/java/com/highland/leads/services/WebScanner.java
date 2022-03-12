@@ -79,9 +79,9 @@ public class WebScanner implements Runnable{
         //    options.addArguments("--headless");
         //java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
         if(isWindows){
-            System.setProperty(System.getProperty("user.dir") + "\\chromedriver.exe", "true");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
         }else{
-            System.setProperty(System.getProperty("user.dir") + "\\chromedriver", "true");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
         }
 
         directory = null;

@@ -21,9 +21,7 @@ public class Main{
             WebScanner.username = args[2];
             WebScanner.password = args[3];
             WebScanner.jobRequest = Database.getJobRequest(args[4]);
-            try{
-                Database.initialize();
-            }catch (Exception ignored){}
+            Database.initialize();
             WebScanner w = new WebScanner();
             Thread scanThread = new Thread(w);
             scanThread.start();
